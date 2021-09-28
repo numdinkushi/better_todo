@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Todo  </title>
+    <link rel="stylesheet" href="./betterTodo.css">
+</head>
+<body>
+    <h1 class="title"> Stuff I need to do </h1>
+         <div class="all-task" >
+            <h2 class="task-list-title"> Tasks for the day</h2>
+            <ul class="task-list" data-lists>
+              <li class="list-name active-list"></li>
+              <li  class="list-name"></li>
+                <li  class="list-name"></li>
+            </ul>  
+
+
+                <form action="" data-new-list-form>
+                    <input type="text"
+                    class="new list"
+                    data-new-list-input
+                    placeholder="New List Name"
+                    aria-label="new list name"
+
+                    />
+
+                    <button class="btn create"
+                    aria-label = "create new list">+</button>
+                </form>
+         </div>
+
+         
+
+            <div class="todo-list" data-list-display-container>
+                <div class="todo-header">
+                    <h2 class="list-title" data-list-title></h2>
+               <p class="task-count" data-list-count></p>
+
+                </div>
+                 
+                <div class="todo-body">
+                    <div class="tasks" data-tasks>
+                        <div class="task">
+                            <input type="checkbox"
+                           id="task-1" />
+                            <label for="task-1">
+                                <span class="custom-checkbox"></span>
+                                </label>
+                        </div>
+                        <!-- close task one -->
+
+                       
+                                <div class="task">
+                                    <input type="checkbox"
+                                   id="task-2" />
+                                    <label for="task-2">
+                                        <span class="custom-checkbox"></span>
+                                        </label>
+                                </div>
+                        <!-- close task two -->
+                       
+                                <!-- <div class="task">
+                                    <input type="checkbox"
+                                   id="task-3" />
+                                    <label for="task-3">
+                                        <span class="custom-checkbox"></span>
+                                        Eat Munch it</label>
+                                </div> -->
+                    <!-- close task three -->
+ 
+                    </div>
+                    </div> 
+                    <div class="new-task-creator">
+                        <form action="" data-new-task-form>
+                            <input type="text"
+                            data-new-task-input
+                            class="new list"
+                            placeholder="New task Name"
+                            aria-label="new task name"
+        
+                            />
+        
+                            <button class="btn create"
+                            aria-label = "create new list">+</button>
+                        </form>
+
+                      
+                    </div>
+                  
+                    <div class="delete-stuff">
+                        <button  class="btn delete"
+                        data-clear-complete-tasks-button>Clear Completed Tasks </button>
+                        <button class="btn delete "  data-delete-list-button>Delete List</button>
+
+                    </div>   
+                </div>
+
+            </div>
+
+            <template id="task-template">
+
+                <div class="task">
+                    <input type="checkbox"/>
+                    <label >
+                        <span class="custom-checkbox"></span>
+                    </label>
+                </div>
+                 </template>
+
+    <script src="./betterTodo.js"></script>
+</body>
+</html>
